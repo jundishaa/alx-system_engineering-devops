@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-# This script displays the content of the current directory in a list format
-# Only the part of the name after the first dash is displayed
+# displays the content of the current working directory.
 
-for file in *; do
-  if [[ $file == -* ]]; then
-    echo "${file#*-}"
-  fi
+for i in *
+do
+    echo "$i" | cut -d'-' -f2
 done
